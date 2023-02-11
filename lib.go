@@ -37,9 +37,29 @@ func (s *Session) SetCslContent(cslContent string) {
 	s.cslFile = cslContent
 }
 
+// SetCslFile sets the content of the CSL file for the session.
+func (s *Session) SetCslFile(cslFilePath string) error {
+	buf, err := os.ReadFile(cslFilePath)
+	if err != nil {
+		return err
+	}
+	s.cslFile = string(buf)
+	return nil
+}
+
 // SetLocaleContent sets the content of the locale file for the session.
 func (s *Session) SetLocaleContent(localeContent string) {
 	s.localeFile = localeContent
+}
+
+// SetLocaleFile sets the content of the locale file for the session.
+func (s *Session) SetLocaleFile(localeFilePath string) error {
+	buf, err := os.ReadFile(localeFilePath)
+	if err != nil {
+		return err
+	}
+	s.localeFile = string(buf)
+	return nil
 }
 
 // Init initializes the Citeproc session by loading required files and setting up the runtime.
