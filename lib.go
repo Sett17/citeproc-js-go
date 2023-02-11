@@ -11,12 +11,16 @@ or if not provided, use the default files included in the package.
 package citeproc_js_go
 
 import (
+	_ "embed"
 	"encoding/xml"
 	"fmt"
 	"github.com/dop251/goja"
 	"github.com/sett17/citeproc-js-go/csljson"
 	"os"
 )
+
+//go:embed citeproc.min.js
+var citeprocMinJs string
 
 // Session is a struct that stores information about the Citeproc session.
 type Session struct {
@@ -69,10 +73,7 @@ func (s *Session) Init() error {
 
 	// If cslFile is not set, use the default IEEE CSL file.
 	if s.cslFile == "" {
-		s.cslFile, err = ieeeCslContent()
-		if err != nil {
-			return err
-		}
+		s.cslFile = ieeeCsl
 	}
 	err = s.vm.Set("cslFile", s.cslFile)
 	if err != nil {
@@ -81,10 +82,7 @@ func (s *Session) Init() error {
 
 	// If localeFile is not set, use the default en-US locale file.
 	if s.localeFile == "" {
-		s.localeFile, err = localesEnUsXmlContent()
-		if err != nil {
-			return err
-		}
+		s.localeFile = enUsLocale
 	}
 	err = s.vm.Set("localeFile", s.localeFile)
 	if err != nil {
@@ -92,12 +90,7 @@ func (s *Session) Init() error {
 	}
 
 	// Load citeproc-js into the runtime.
-	//buf, err := os.ReadFile("citeproc.min.js")
-	buf, err := os.ReadFile("citeproc.js")
-	if err != nil {
-		return err
-	}
-	_, err = s.vm.RunString(string(buf))
+	_, err = s.vm.RunString(citeprocMinJs)
 	if err != nil {
 		return err
 	}
