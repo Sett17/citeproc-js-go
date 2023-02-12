@@ -24,6 +24,7 @@ import (
 	"fmt"
 	"github.com/sett17/citeproc-js-go/csljson"
 	citeproc "github.com/sett17/citeproc-js-go"
+	"io"
 )
 
 func main() {
@@ -52,28 +53,34 @@ func main() {
 
 	// Define the citation items
 	var items []csljson.Item
-	
+
 	//TODO: Add items to the session
 
-	// Process the citation cluster
-	citationCluster, err := session.ProcessCitationCluster(items...)
+	// Add all items to the session
+	err = session.AddCitation(items...)
+
+	cluster := make([]csljson.Item, 0)
+	//TODO add items to the cluster
+	
+	// Process a citation cluster
+	citationCluster, err := session.ProcessCitationCluster(cluster...)
 	if err != nil {
 		fmt.Println("Error processing citation cluster:", err)
 		return
 	}
 
-	// Print the resulting citation
+	// Print the resulting citation (this is what goes into the text, e.g. [1], [4])
 	fmt.Println(citationCluster)
-	
+
 	// Make bibliography
 	bibliography, err := session.MakeBibliography()
 	if err != nil {
-    fmt.Println("Error making bibliography:", err)
-    return
-  }
-  
-  // Print the resulting bibliography
-  fmt.Println(bibliography)
+		fmt.Println("Error making bibliography:", err)
+		return
+	}
+
+	// Print the resulting bibliography
+	fmt.Println(bibliography)
 }
 ```
 
