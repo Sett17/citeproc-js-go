@@ -1,11 +1,995 @@
 [
-  {"id":"lastnameArtworkTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"call-number":"call number","citation-key":"lastnameArtworkTitledate","dimensions":"size","issued":{"literal":"date"},"language":"lang","license":"rights","medium":"medium","note":"extra","source":"lib catalog","title":"Artwork Title","title-short":"short title","type":"graphic","URL":"URL"},
-  {"id":"lastnameAudioRecordingTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"call-number":"call number","citation-key":"lastnameAudioRecordingTitledate","collection-title":"series title","dimensions":"running time","event-place":"place","ISBN":"isbn","issued":{"literal":"date"},"language":"language","license":"rights","medium":"format","note":"extra","number-of-volumes":"number of volume","publisher":"label","publisher-place":"place","source":"lib catalog","title":"Audio Recording Title","title-short":"short title","type":"song","URL":"URL","volume":"volume"},
-  {"id":"lastnameBillTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"authority":"body","chapter-number":"session","citation-key":"lastnameBillTitledate","container-title":"code","issued":{"literal":"date"},"language":"lang","license":"rights","note":"extra","number":"bill num","page":"code pages","references":"history","section":"section","title":"Bill Title","title-short":"short title","type":"bill","URL":"URL","volume":"code vol"},
-  {"id":"lastnameReportTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"call-number":"call number","citation-key":"lastnameReportTitledate","collection-title":"series title","event-place":"place","genre":"report type","issued":{"literal":"date"},"language":"lang","license":"rights","note":"extra","number":"report num","page":"pages","publisher":"institution","publisher-place":"place","source":"lib catalog","title":"Report Title","title-short":"short title","type":"report","URL":"URL"},
-  {"id":"lastnameSoftwareTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"call-number":"call number","citation-key":"lastnameSoftwareTitledate","collection-title":"series title","event-place":"place","genre":"prog lang","ISBN":"ISBN","issued":{"literal":"date"},"license":"rights","medium":"system","note":"extra","publisher":"company","publisher-place":"place","source":"lib catalog","title":"Software title","title-short":"short title","type":"software","URL":"URL","version":"version"},
-  {"id":"lastnameStatueTitledateenacted","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"chapter-number":"session","citation-key":"lastnameStatueTitledateenacted","container-title":"code","issued":{"literal":"date enacted"},"language":"lang","license":"rights","note":"extra","number":"public law num","page":"pages","references":"history","section":"section","title":"statue title","title-short":"short title","type":"legislation","URL":"URL","volume":"code num"},
-  {"id":"lastnameThesisTitledate","abstract":"abstract","archive":"archive","archive_location":"loc in archiv","author":[{"family":"LASTNAME","given":"FIRSTNAME"}],"call-number":"call number","citation-key":"lastnameThesisTitledate","event-place":"place","genre":"type","issued":{"literal":"date"},"language":"lang","license":"rights","note":"extra","number-of-pages":"num of pages","publisher":"university","publisher-place":"place","source":"lib catalog","title":"Thesis Title","title-short":"short title","type":"thesis","URL":"URL"},
-  {"id":"lastnameTVBroadcastdate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","call-number":"call number","citation-key":"lastnameTVBroadcastdate","container-title":"program title","dimensions":"running time","director":[{"family":"LASTNAME","given":"FIRSTNAME"}],"event-place":"place","issued":{"literal":"date"},"language":"lang","license":"rights","medium":"format","note":"extra","number":"episode num","publisher":"network","publisher-place":"place","source":"lib catalog","title":"TV Broadcast","title-short":"short title","type":"broadcast","URL":"URL"},
-  {"id":"lastnameVideoRecordingTitledate","abstract":"abstract","accessed":{"date-parts":[[2023,1,1]]},"archive":"archive","archive_location":"loc in archiv","call-number":"call number","citation-key":"lastnameVideoRecordingTitledate","collection-title":"series title","dimensions":"running time","director":[{"family":"LASTNAME","given":"FIRSTNAME"}],"event-place":"place","ISBN":"ISBN","issued":{"literal":"date"},"language":"lang","license":"rights","medium":"format","note":"extra","number-of-volumes":"num of volumes","publisher":"studio","publisher-place":"place","source":"lib catalog","title":"Video Recording Title","title-short":"short title","type":"motion_picture","URL":"URL","volume":"vol"}
+  {
+    "id": "ITservices",
+    "type": "webpage",
+    "container-title": "Atos",
+    "language": "de-DE",
+    "title": "IT services for complex computer environments",
+    "URL": "https://atos.net/de/deutschland/sc",
+    "accessed": {
+      "date-parts": [
+        [
+          "2021",
+          12,
+          25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PeekabooAV2022",
+    "type": "webpage",
+    "abstract": "Peekaboo Extended Email Attachment Behavior Observation Owl",
+    "license": "GPL-3.0",
+    "note": "original-date: 2017-05-19T10:10:38Z",
+    "title": "PeekabooAV",
+    "URL": "https://github.com/scVENUS/PeekabooAV",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          3,
+          25
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          3,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "OverviewDocker2022",
+    "type": "webpage",
+    "abstract": "Introduction and Overview of Compose",
+    "container-title": "Docker Documentation",
+    "language": "en",
+    "title": "Overview of Docker Compose",
+    "URL": "https://docs.docker.com/compose/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          3
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Whatopen",
+    "type": "webpage",
+    "abstract": "Open source is a term that refers to open source software (OSS). Open source software is code that can been seen, modified, and distributed by anyone.",
+    "language": "en",
+    "title": "What is open source?",
+    "URL": "https://www.redhat.com/en/topics/open-source/what-is-open-source",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "LegalSide2022",
+    "type": "webpage",
+    "abstract": "Everything you’ve ever wondered about the legal side of open source, and a few things you didn’t.",
+    "container-title": "Open Source Guides",
+    "language": "en",
+    "title": "The Legal Side of Open Source",
+    "URL": "https://opensource.guide/legal/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          19
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Chooseopen",
+    "type": "webpage",
+    "abstract": "Non-judgmental guidance on choosing a license for your open source project",
+    "container-title": "Choose a License",
+    "language": "en",
+    "title": "Choose an open source license",
+    "URL": "https://choosealicense.com/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Buildsoftware",
+    "type": "webpage",
+    "abstract": "GitHub is where people build software. More than 73 million people use GitHub to discover, fork, and contribute to over 200 million projects.",
+    "container-title": "GitHub",
+    "language": "en",
+    "title": "Build software better, together",
+    "URL": "https://github.com",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "GitHubflow",
+    "type": "webpage",
+    "abstract": "Follow GitHub flow to collaborate on projects.",
+    "container-title": "GitHub Docs",
+    "language": "en",
+    "title": "GitHub flow",
+    "URL": "http://ghdocs-prod.azurewebsites.net:80/en/get-started/quickstart/github-flow",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Git",
+    "type": "webpage",
+    "title": "About - Git",
+    "URL": "https://git-scm.com/about",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "carlonicoespeongitgraph2022",
+    "type": "software",
+    "abstract": "👋 [Looking for maintainers] - A JavaScript library to draw pretty git graphs in the browser",
+    "genre": "TypeScript",
+    "license": "MIT",
+    "note": "original-date: 2013-08-14T09:46:20Z",
+    "source": "GitHub",
+    "title": "nicoespeon/gitgraph.js",
+    "URL": "https://github.com/nicoespeon/gitgraph.js",
+    "author": [
+      {
+        "family": "Carlo",
+        "given": "Nicolas"
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          14
+        ]
+      ]
+    }
+  },
+  {
+    "id": "GitBranches",
+    "type": "webpage",
+    "title": "Git - Branches in a Nutshell",
+    "URL": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pullrequest",
+    "type": "webpage",
+    "abstract": "You can merge pull requests by retaining all the commits in a feature branch, squashing all commits into a single commit, or by rebasing individual commits from the head branch onto the base branch.",
+    "container-title": "GitHub Docs",
+    "language": "en",
+    "title": "About pull request merges",
+    "URL": "https://ghdocs-prod.azurewebsites.net/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          30
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Gitgitmerge",
+    "type": "webpage",
+    "title": "Git - git-merge Documentation",
+    "URL": "https://git-scm.com/docs/git-merge",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          4,
+          30
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Dockeroverview2022",
+    "type": "webpage",
+    "abstract": "Docker explained in depth",
+    "container-title": "Docker Documentation",
+    "language": "en",
+    "title": "Docker overview",
+    "URL": "https://docs.docker.com/get-started/overview/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "id": "WhatDocker",
+    "type": "webpage",
+    "abstract": "Explore how the principles behind open source--collaboration, transparency, and rapid prototyping--are proven catalysts for innovation.",
+    "language": "en",
+    "title": "What is Docker? | Opensource.com",
+    "title-short": "What is Docker?",
+    "URL": "https://opensource.com/resources/what-docker",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Whatvirtualization",
+    "type": "webpage",
+    "abstract": "Explore how the principles behind open source--collaboration, transparency, and rapid prototyping--are proven catalysts for innovation.",
+    "language": "en",
+    "title": "What is virtualization? | Opensource.com",
+    "title-short": "What is virtualization?",
+    "URL": "https://opensource.com/resources/virtualization",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Understandingvirtualization",
+    "type": "webpage",
+    "abstract": "Virtualization makes a single physical machine act like multiple—saving you the cost of more servers and workstations.",
+    "language": "en",
+    "title": "Understanding virtualization",
+    "URL": "https://www.redhat.com/en/topics/virtualization",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Moby",
+    "type": "webpage",
+    "title": "Moby",
+    "URL": "http://mobyproject.org/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Dockerfilereference2022",
+    "type": "webpage",
+    "abstract": "Dockerfiles use a simple DSL which allows you to automate the steps you would normally manually take to create an image.",
+    "container-title": "Docker Documentation",
+    "language": "en",
+    "title": "Dockerfile reference",
+    "URL": "https://docs.docker.com/engine/reference/builder/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "id": "AlpineOfficial",
+    "type": "webpage",
+    "title": "Alpine - Official Image | Docker Hub",
+    "URL": "https://hub.docker.com/_/alpine",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "UseDocker2022",
+    "type": "webpage",
+    "abstract": "Making our lives easier with Compose for our application",
+    "container-title": "Docker Documentation",
+    "language": "en",
+    "title": "Use Docker Compose",
+    "URL": "https://docs.docker.com/get-started/08_using_compose/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          5
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "id": "resnickInternetMessage2001",
+    "type": "report",
+    "abstract": "This document specifies a syntax for text messages that are sent between computer users, within the framework of \"electronic mail\" messages. [STANDARDS-TRACK]",
+    "genre": "Request for Comments",
+    "note": "DOI: 10.17487/RFC2822\nnumber-of-pages: 51",
+    "number": "RFC 2822",
+    "publisher": "Internet Engineering Task Force",
+    "source": "IETF",
+    "title": "Internet Message Format",
+    "URL": "https://datatracker.ietf.org/doc/rfc2822",
+    "author": [
+      {
+        "family": "Resnick",
+        "given": "Pete"
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          6,
+          11
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2001",
+          4,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "resnickInternetMessage2008",
+    "type": "report",
+    "abstract": "This document specifies the Internet Message Format (IMF), a syntax for text messages that are sent between computer users, within the framework of \"electronic mail\" messages. This specification is a revision of Request For Comments (RFC) 2822, which itself superseded Request For Comments (RFC) 822, \"Standard for the Format of ARPA Internet Text Messages\", updating it to reflect current practice and incorporating incremental changes that were specified in other RFCs. [STANDARDS-TRACK]",
+    "genre": "Request for Comments",
+    "note": "DOI: 10.17487/RFC5322\nnumber-of-pages: 57",
+    "number": "RFC 5322",
+    "publisher": "Internet Engineering Task Force",
+    "source": "IETF",
+    "title": "Internet Message Format",
+    "URL": "https://datatracker.ietf.org/doc/rfc5322",
+    "author": [
+      {
+        "family": "Resnick",
+        "given": "Pete"
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          6,
+          11
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2008",
+          10
+        ]
+      ]
+    }
+  },
+  {
+    "id": "resnickInternetMessage2008a",
+    "type": "report",
+    "abstract": "This document specifies the Internet Message Format (IMF), a syntax for text messages that are sent between computer users, within the framework of \"electronic mail\" messages. This specification is a revision of Request For Comments (RFC) 2822, which itself superseded Request For Comments (RFC) 822, \"Standard for the Format of ARPA Internet Text Messages\", updating it to reflect current practice and incorporating incremental changes that were specified in other RFCs. [STANDARDS-TRACK]",
+    "genre": "Request for Comments",
+    "note": "DOI: 10.17487/RFC5322\nnumber-of-pages: 57",
+    "number": "RFC 5322",
+    "publisher": "Internet Engineering Task Force",
+    "source": "IETF",
+    "title": "Internet Message Format",
+    "URL": "https://datatracker.ietf.org/doc/rfc5322",
+    "author": [
+      {
+        "family": "Resnick",
+        "given": "Pete"
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          6,
+          11
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2008",
+          10
+        ]
+      ]
+    }
+  },
+  {
+    "id": "klensinSimpleMail2008",
+    "type": "report",
+    "abstract": "This document is a specification of the basic protocol for Internet electronic mail transport. It consolidates, updates, and clarifies several previous documents, making all or parts of most of them obsolete. It covers the SMTP extension mechanisms and best practices for the contemporary Internet, but does not provide details about particular extensions. Although SMTP was designed as a mail transport and delivery protocol, this specification also contains information that is important to its use as a \"mail submission\" protocol for \"split-UA\" (User Agent) mail reading systems and mobile environments. [STANDARDS-TRACK]",
+    "genre": "Request for Comments",
+    "note": "DOI: 10.17487/RFC5321\nnumber-of-pages: 95",
+    "number": "RFC 5321",
+    "publisher": "Internet Engineering Task Force",
+    "source": "IETF",
+    "title": "Simple Mail Transfer Protocol",
+    "URL": "https://datatracker.ietf.org/doc/rfc5321",
+    "author": [
+      {
+        "family": "Klensin",
+        "given": "John C."
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          6,
+          11
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2008",
+          10
+        ]
+      ]
+    }
+  },
+  {
+    "id": "WhatMessageTransfer",
+    "type": "webpage",
+    "abstract": "This definition explains the meaning of Message Transfer Agent and why it matters.",
+    "container-title": "Techopedia.com",
+    "language": "en",
+    "title": "What is a Message Transfer Agent (MTA)? - Definition from Techopedia",
+    "title-short": "What is a Message Transfer Agent (MTA)?",
+    "URL": "http://www.techopedia.com/definition/1691/message-transfer-agent-mta",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ConversationsOtherTeam",
+    "type": "interview",
+    "language": "German",
+    "title": "Conversations with the other Team Members.",
+    "title-short": "Conversations"
+  },
+  {
+    "id": "Rspamd",
+    "type": "webpage",
+    "title": "About Rspamd",
+    "URL": "https://rspamd.com/doc/index.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          11
+        ]
+      ]
+    }
+  },
+  {
+    "id": "tangWhatSpamFiltering",
+    "type": "webpage",
+    "abstract": "Spam filters detect unsolicited, unwanted, and virus-infested email (called spam) and stop it from getting into email inboxes.",
+    "container-title": "MailChannels",
+    "language": "en-US",
+    "title": "What is Spam Filtering?",
+    "URL": "https://www.mailchannels.com/what-is-spam-filtering/",
+    "author": [
+      {
+        "family": "Tang",
+        "given": "Mandy"
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          11
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RspamdRspamd2022",
+    "type": "software",
+    "abstract": "Rapid spam filtering system.",
+    "genre": "C",
+    "note": "original-date: 2013-04-19T16:00:18Z",
+    "publisher": "Rspamd",
+    "source": "GitHub",
+    "title": "rspamd/rspamd",
+    "URL": "https://github.com/rspamd/rspamd",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          11
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "CortexTheHive2022",
+    "type": "software",
+    "abstract": "Cortex: a Powerful Observable Analysis and Active Response Engine",
+    "genre": "Scala",
+    "license": "AGPL-3.0",
+    "note": "original-date: 2017-01-10T10:52:57Z",
+    "publisher": "TheHive Project",
+    "source": "GitHub",
+    "title": "Cortex and TheHive",
+    "URL": "https://github.com/TheHive-Project/Cortex",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          21
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          21
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PeekabooAVInstaller2022a",
+    "type": "software",
+    "abstract": "This repository provides scripts and configuration files to install, update and test a Peekaboo installation",
+    "genre": "Shell",
+    "license": "GPL-3.0",
+    "note": "original-date: 2017-09-18T13:01:03Z",
+    "publisher": "scVENUS",
+    "source": "GitHub",
+    "title": "PeekabooAV Installer",
+    "URL": "https://github.com/scVENUS/PeekabooAV-Installer",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          28
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          1,
+          12
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PostfixHomePage",
+    "type": "webpage",
+    "title": "The Postfix Home Page",
+    "URL": "https://www.postfix.org/start.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          7,
+          31
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PostfixConfigurationParameters",
+    "type": "webpage",
+    "title": "Postfix Configuration Parameters",
+    "URL": "https://www.postfix.org/postconf.5.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          9
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PostfixBeforequeueMilter",
+    "type": "webpage",
+    "title": "Postfix before-queue Milter support",
+    "URL": "https://www.postfix.org/MILTER_README.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          9
+        ]
+      ]
+    }
+  },
+  {
+    "id": "UseMultistageBuilds2022",
+    "type": "webpage",
+    "abstract": "Keeping your images small with multi-stage images",
+    "container-title": "Docker Documentation",
+    "language": "en",
+    "title": "Use multi-stage builds",
+    "URL": "https://docs.docker.com/develop/develop-images/multistage-build/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          15
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          12
+        ]
+      ]
+    }
+  },
+  {
+    "id": "CortexDocs2022",
+    "type": "software",
+    "abstract": "Documentation of Cortex",
+    "license": "AGPL-3.0",
+    "note": "original-date: 2017-05-17T08:20:05Z",
+    "publisher": "TheHive Project",
+    "source": "GitHub",
+    "title": "Cortex Docs",
+    "URL": "https://github.com/TheHive-Project/CortexDocs",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          17
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          13
+        ]
+      ]
+    }
+  },
+  {
+    "id": "TheHiveProject",
+    "type": "webpage",
+    "abstract": "Scalable, Open Source Security Incident Response Solutions designed for SOCs & CERTs to collaborate, elaborate, analyze and get their job done",
+    "language": "en",
+    "title": "TheHive Project",
+    "URL": "https://www.thehive-project.org",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          17
+        ]
+      ]
+    }
+  },
+  {
+    "id": "UsingDockerinDockerYour",
+    "type": "webpage",
+    "title": "Using Docker-in-Docker for your CI or testing environment? Think twice.",
+    "URL": "https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          17
+        ]
+      ]
+    }
+  },
+  {
+    "id": "FreeOpenSearch",
+    "type": "webpage",
+    "abstract": "We're the creators of the Elastic (ELK) Stack -- Elasticsearch, Kibana, Beats, and Logstash. Securely and reliably search, analyze, and visualize your data in the cloud or on-prem.",
+    "language": "en-us",
+    "title": "Free and Open Search: The Creators of Elasticsearch, ELK & Kibana | Elastic",
+    "title-short": "Free and Open Search",
+    "URL": "https://www.elastic.co/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          17
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Curl",
+    "type": "webpage",
+    "title": "curl",
+    "URL": "https://curl.se/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          19
+        ]
+      ]
+    }
+  },
+  {
+    "id": "miniksaConsoleVirtualTerminal",
+    "type": "webpage",
+    "abstract": "Virtual terminal sequences are control character sequences that can control cursor movement, color/font mode, and other operations when written to the output stream.",
+    "language": "en-us",
+    "title": "Console Virtual Terminal Sequences - Windows Console",
+    "URL": "https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences",
+    "author": [
+      {
+        "family": "miniksa",
+        "given": ""
+      }
+    ],
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          19
+        ]
+      ]
+    }
+  },
+  {
+    "id": "AtosWorldgridCompany",
+    "type": "webpage",
+    "abstract": "Energie ist … Antrieb  Stets die bestmögliche Leistung zu bieten, spornt uns an. Kraft Über 170 Berater sorgen für Ihren Projekterfolg. Stärke Individuelle Kompetenzen machen uns leistungsstark. Vitalität Der Mensch und sein Wohl stehen im Mittelpunkt. News & Events Webinar | EBD Rechnungseingangsprüfung 02.08.22 | 14.00 – 15.00 Uhr ab dem 01.10. müssen Lieferanten eingehende […]",
+    "container-title": "ENERGY4U",
+    "language": "de-DE",
+    "title": "An Atos Worldgrid Company",
+    "URL": "https://energy4u.org/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          20
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SAP4HANACloud",
+    "type": "webpage",
+    "abstract": "SAP S/4HANA Cloud is a next-generation, intelligent ERP business suite designed specifically for in-memory computing.",
+    "container-title": "SAP",
+    "language": "English",
+    "title": "SAP S/4HANA Cloud ERP Software Solution",
+    "URL": "https://www.sap.com/products/erp/s4hana.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          22
+        ]
+      ]
+    }
+  },
+  {
+    "id": "InternalE4UToolbox",
+    "type": "document",
+    "abstract": "Internal user-facing documentation",
+    "publisher": "Energy4U",
+    "title": "Internal 'E4U Toolbox Benutzerhandbuch'"
+  },
+  {
+    "id": "InternalABAPHelp",
+    "type": "document",
+    "title": "Internal ABAP Help"
+  },
+  {
+    "id": "AllSAPCommunity",
+    "type": "webpage",
+    "title": "All Q&A | SAP Community",
+    "URL": "https://answers.sap.com/index.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          23
+        ]
+      ]
+    }
+  },
+  {
+    "id": "OpenSQLSAP",
+    "type": "webpage",
+    "title": "Open SQL | SAP Help Portal",
+    "URL": "https://help.sap.com/docs/SAP_NETWEAVER_702/fe24b0146c551014891ad42d6b2789e5/fceb3969358411d1829f0000e829fbfe.html?version=7.02.22",
+    "accessed": {
+      "date-parts": [
+        [
+          "2022",
+          8,
+          23
+        ]
+      ]
+    }
+  }
 ]

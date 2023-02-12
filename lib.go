@@ -146,7 +146,7 @@ func (s *Session) AddCitation(items ...csljson.Item) error {
 	}
 
 	for i := range items {
-		_, err := addCitation(goja.Undefined(), s.vm.ToValue(items[i].CitationKey), s.vm.ToValue(items[i]))
+		_, err := addCitation(goja.Undefined(), s.vm.ToValue(items[i].ID), s.vm.ToValue(items[i]))
 		if err != nil {
 			return err
 		}

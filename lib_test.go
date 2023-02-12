@@ -29,17 +29,11 @@ func TestDev(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	res1, err := s.ProcessCitationCluster(citsList[0:3]...)
+	res1, err := s.ProcessCitationCluster(citsList...)
 	if err != nil {
 		t.Fatal(err)
 	}
 	t.Logf("res1: %+v", res1)
-
-	res2, err := s.ProcessCitationCluster(citsList[1], citsList[4], citsList[6], citsList[7])
-	if err != nil {
-		t.Fatal(err)
-	}
-	t.Logf("res1: %+v", res2)
 
 	bib, err := s.MakeBibliography()
 	if err != nil {
