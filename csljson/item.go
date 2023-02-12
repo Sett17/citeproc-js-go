@@ -11,7 +11,7 @@ type Item struct {
 	// Accessed is a struct that contains the date when the item was accessed.
 	Accessed struct {
 		// DateParts is a two-dimensional array that contains the date parts in integer form.
-		DateParts [][]int `json:"date-parts"`
+		DateParts [][]any `json:"date-parts"` // is numbers and string in regular csl-json, better csl-json only numbers
 	} `json:"accessed"`
 	// Archive is the name of the archive where the item is stored.
 	Archive string `json:"archive"`
