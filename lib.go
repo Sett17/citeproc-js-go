@@ -15,12 +15,21 @@ import (
 	"encoding/xml"
 	"fmt"
 	"github.com/dop251/goja"
+	"github.com/dop251/goja_nodejs/console"
+	_ "github.com/dop251/goja_nodejs/console"
+	"github.com/dop251/goja_nodejs/require"
 	"github.com/sett17/citeproc-js-go/csljson"
 	"os"
 )
 
 //go:embed citeproc.min.js
 var citeprocMinJs string
+
+//go:embed ieee.csl
+var ieeeCsl string
+
+//go:embed locales-en-US.xml
+var enUsLocale string
 
 // Session is a struct that stores information about the Citeproc session.
 type Session struct {
@@ -67,10 +76,10 @@ func (s *Session) SetLocaleFile(localeFilePath string) error {
 }
 
 // Init initializes the Citeproc session by loading required files and setting up the runtime.
-func (s *Session) Init() error {
+func (s *Session) Init() (err error) {
 	s.vm.SetFieldNameMapper(goja.TagFieldNameMapper("json", true))
-	var err error
-
+	new(require.Registry).Enable(s.vm)
+	console.Enable(s.vm)
 	// If cslFile is not set, use the default IEEE CSL file.
 	if s.cslFile == "" {
 		s.cslFile = ieeeCsl
@@ -98,11 +107,11 @@ func (s *Session) Init() error {
 	// Set up the citeprocSys object and create a new CSL engine.
 	_, err = s.vm.RunString(`
 let citations = {};
-let itemIDs = [];
+//let itemIDs = [];
 
 function addCitation(id, citation) {
 	citations[id] = citation;
-	itemIDs.push(id);
+	//itemIDs.push(id);
 }
 
 citeprocSys = {
@@ -110,15 +119,17 @@ citeprocSys = {
 		return localeFile;
     },
     retrieveItem: function(id){
-        return citations[id];
+		//if (id in citations) {
+		return citations[id];
+		//}
+		//return {};
     }
 };
 
 let engine = new CSL.Engine(citeprocSys, cslFile);
 
-//wrapper functions
-function pcc(citationData) {
-	return engine.processCitationCluster(citationData, [], []);
+function pcc(citationData, pre) {
+	return engine.processCitationCluster(citationData, pre, []);
 }
 `)
 	if err != nil {
@@ -128,35 +139,57 @@ function pcc(citationData) {
 	return nil
 }
 
-// ProcessCitationCluster processes a citation cluster and returns the resulting string that should be placed in the text at the place of the citation.
-func (s *Session) ProcessCitationCluster(items ...csljson.Item) (string, error) {
+func (s *Session) AddCitation(items ...csljson.Item) error {
 	addCitation, ok := goja.AssertFunction(s.vm.Get("addCitation"))
 	if !ok {
-		return "", fmt.Errorf("addCitation is not a function")
+		return fmt.Errorf("addCitation is not a function")
 	}
+
+	for i := range items {
+		_, err := addCitation(goja.Undefined(), s.vm.ToValue(items[i].CitationKey), s.vm.ToValue(items[i]))
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+var citationsPre = make([][]string, 0)
+
+// ProcessCitationCluster processes a citation cluster and returns the resulting string that should be placed in the text at the place of the citation.
+func (s *Session) ProcessCitationCluster(items ...csljson.Item) (string, error) {
 
 	citeItems := make([]csljson.CiteItem, len(items))
 	for i := range items {
-		_, err := addCitation(goja.Undefined(), s.vm.ToValue(items[i].ID), s.vm.ToValue(items[i]))
-		if err != nil {
-			return "", err
-		}
 		citeItems[i] = csljson.CiteItemFromItem(items[i])
 	}
 
 	citation := csljson.Citation{
 		CitationItems: citeItems,
+		Properties: struct {
+			NoteIndex int `json:"noteIndex"`
+		}{
+			NoteIndex: 0,
+		},
+		//CitationID:  fmt.Sprintf("%X", rand.Int31()),
+		CitationID:  nil,
+		SortedItems: nil,
 	}
+	//citationsPre = append(citationsPre, []string{citation.CitationID.(string), "0"})
 	pcc, ok := goja.AssertFunction(s.vm.Get("pcc"))
 	if !ok {
 		return "", fmt.Errorf("pcc is not a function")
 	}
-	result, err := pcc(goja.Undefined(), s.vm.ToValue(citation))
+	result, err := pcc(goja.Undefined(), s.vm.ToValue(citation), s.vm.ToValue(citationsPre))
 	if err != nil {
 		return "", err
 	}
 	resExport := result.Export()
 
+	if resExport.([]interface{})[0].(map[string]interface{})["bibchange"].(bool) {
+		citationsPre = append(citationsPre, []string{resExport.([]interface{})[1].([]interface{})[0].([]interface{})[2].(string), "0"})
+	}
 	return resExport.([]interface{})[1].([]interface{})[0].([]interface{})[1].(string), nil
 }
 

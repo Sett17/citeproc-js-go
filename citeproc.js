@@ -7039,13 +7039,14 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
         //SNIP-END
     }
 
+
     this.tmp.taintedCitationIDs = {};
     var sortedItems = [];
 
     // Styles that use note backreferencing with a by-cite
     // givenname disambiguation rule include the note number
     // in the cite for disambiguation purposes. Correct resolution
-    // of disambiguate="true" conditions on first-reference cites 
+    // of disambiguate="true" conditions on first-reference cites
     // in certain editing scenarios (e.g. where a cite is moved across
     // notes) requires that disambiguation be rerun on cites
     // affected by the edit.
