@@ -29,7 +29,7 @@ func TestDev(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	res1, err := s.ProcessCitationCluster(citsList...)
+	res1, err := s.ProcessCitationCluster(citsList[0], citsList[2], citsList[3], citsList[4], citsList[5])
 	if err != nil {
 		t.Fatal(err)
 	}

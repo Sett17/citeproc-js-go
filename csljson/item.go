@@ -1,5 +1,7 @@
 package csljson
 
+import "encoding/json"
+
 //// Item is a struct that represents an item in a citation information.
 //type Item struct {
 //	// ID is the identifier of the item.
@@ -117,29 +119,56 @@ package csljson
 //	Version string `json:"version"`
 //}
 
+//type Item struct {
+//	ID             string `json:"id"`
+//	Type           string `json:"type"`
+//	ContainerTitle string `json:"container-title,omitempty"`
+//	Language       string `json:"language,omitempty"`
+//	Title          string `json:"title"`
+//	URL            string `json:"URL,omitempty"`
+//	Accessed       struct {
+//		DateParts [][]interface{} `json:"date-parts"`
+//	} `json:"accessed,omitempty"`
+//	Abstract string `json:"abstract,omitempty"`
+//	License  string `json:"license,omitempty"`
+//	Note     string `json:"note,omitempty"`
+//	Issued   struct {
+//		DateParts [][]interface{} `json:"date-parts"`
+//	} `json:"issued,omitempty"`
+//	Genre  string `json:"genre,omitempty"`
+//	Source string `json:"source,omitempty"`
+//	Author []struct {
+//		Family string `json:"family"`
+//		Given  string `json:"given"`
+//	} `json:"author,omitempty"`
+//	TitleShort string `json:"title-short,omitempty"`
+//	Number     string `json:"number,omitempty"`
+//	Publisher  string `json:"publisher,omitempty"`
+//}
+
 type Item struct {
-	ID             string `json:"id"`
-	Type           string `json:"type"`
-	ContainerTitle string `json:"container-title,omitempty"`
-	Language       string `json:"language,omitempty"`
-	Title          string `json:"title"`
-	URL            string `json:"URL,omitempty"`
-	Accessed       struct {
-		DateParts [][]interface{} `json:"date-parts"`
-	} `json:"accessed,omitempty"`
-	Abstract string `json:"abstract,omitempty"`
-	License  string `json:"license,omitempty"`
-	Note     string `json:"note,omitempty"`
-	Issued   struct {
-		DateParts [][]interface{} `json:"date-parts"`
-	} `json:"issued,omitempty"`
-	Genre  string `json:"genre,omitempty"`
-	Source string `json:"source,omitempty"`
-	Author []struct {
-		Family string `json:"family"`
-		Given  string `json:"given"`
-	} `json:"author,omitempty"`
-	TitleShort string `json:"title-short,omitempty"`
-	Number     string `json:"number,omitempty"`
-	Publisher  string `json:"publisher,omitempty"`
+	ID   string                 `json:"id"`
+	JSON map[string]interface{} `json:"-"`
+}
+
+func (i *Item) UnmarshalJSON(data []byte) error {
+	type itemAux struct {
+		ID string `json:"id"`
+	}
+
+	var aux itemAux
+	if err := json.Unmarshal(data, &aux); err != nil {
+		return err
+	}
+
+	i.ID = aux.ID
+
+	var genericMap map[string]interface{}
+	if err := json.Unmarshal(data, &genericMap); err != nil {
+		return err
+	}
+
+	i.JSON = genericMap
+
+	return nil
 }
